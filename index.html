@@ -35,12 +35,13 @@
       </header>
       <button id="yes" type="button" class="btn btn-danger btn-lg">Yes</button>
       <button id="no" type="button" class="btn btn-info btn-lg">No</button>
-      <!-- Add buttons to play and stop sound -->
-      <button id="play-sound" type="button" class="btn btn-primary btn-circle">Play</button>
-      <button id="stop-sound" type="button" class="btn btn-secondary btn-circle">Stop</button>
     </div>
   </div>
-  <audio id="background-audio" src="./sound/sound.mp3"></audio>
+  <div class="audio-controls">
+    <button id="play-sound" type="button" class="btn btn-heart">❤️</button>
+    <button id="stop-sound" type="button" class="btn btn-heart">💔</button>
+  </div>
+  <audio id="background-audio" src="./sound/sound.mp3" preload="auto"></audio>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="

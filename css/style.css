@@ -95,13 +95,38 @@ header h4 {
   margin-top: 20px; /* Thêm khoảng cách phía trên nếu cần */
 }
 
-/* CSS để thiết kế các nút thành hình tròn */
-.btn-circle {
+/* CSS để thiết kế các nút thành hình trái tim */
+.btn-heart {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   text-align: center;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 1.428571429;
+  padding: 0;
+  font-size: 24px;
+  line-height: 50px;
+  display: inline-block;
+  margin: 10px;
+  border: none; /* Loại bỏ viền */
+  background-color: transparent; /* Nền trong suốt */
+}
+
+.audio-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Custom class for SweetAlert2 popup text color */
+.swal-popup-black-text {
+  color: black !important;
+}
+
+/* Custom class for SweetAlert2 popup background color */
+.swal-popup-gray-bg .swal2-popup {
+  background-color: #d3d3d3 !important; /* Màu xám trắng */
 }

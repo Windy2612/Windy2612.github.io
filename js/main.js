@@ -33,8 +33,8 @@ function firstQuestion(){
       })
 }
 
- // switch button position
- function switchButton() {
+// switch button position
+function switchButton() {
     var audio = new Audio('sound/duck.mp3');
     audio.play();
     var leftNo = $('#no').css("left");
@@ -46,7 +46,8 @@ function firstQuestion(){
     $('#yes').css("left", leftNo);
     $('#yes').css("top", topNO);
 }
-// move random button póition
+
+// move random button position
 function moveButton() {
     var audio = new Audio('sound/Swish1.mp3');
     audio.play();
@@ -116,6 +117,20 @@ $('#yes').click(function() {
         confirmButtonText: CONFIG.btnReply
     }).then((result) => {
         if (result.value) {
+            if (!$('#txtReason').val().trim()) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Sao cậu không trả lời câu hỏi của tớ vậy ?',
+                    text: 'Xin cậu đó ! 😳',
+                    confirmButtonText: 'Xin lũi nhoa',
+                    customClass: {
+                        popup: 'swal-popup-gray-bg',
+                        title: 'swal-popup-black-text',
+                        content: 'swal-popup-black-text'
+                    }
+                });
+                return;
+            }
             Swal.fire({
                 width: 900,
                 confirmButtonText: CONFIG.btnAccept,
@@ -125,7 +140,7 @@ $('#yes').click(function() {
                 confirmButtonColor: '#83d0c9',
                 onClose: () => {
                     window.location = CONFIG.messLink;
-                  }
+                }
             })
         }
     })
