@@ -89,3 +89,19 @@ header h4 {
 .swal2-backdrop-show{
   background-size: 200px 100px !important;
 }
+
+#play-sound {
+  display: block; /* Đảm bảo nút hiển thị */
+  margin-top: 20px; /* Thêm khoảng cách phía trên nếu cần */
+}
+
+/* CSS để thiết kế các nút thành hình tròn */
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.428571429;
+}

@@ -130,3 +130,12 @@ $('#yes').click(function() {
         }
     })
 })
+
+document.getElementById('play-sound').addEventListener('click', function () {
+  document.getElementById('background-audio').play();
+});
+
+document.getElementById('stop-sound').addEventListener('click', function () {
+  document.getElementById('background-audio').pause();
+  document.getElementById('background-audio').currentTime = 0;
+});

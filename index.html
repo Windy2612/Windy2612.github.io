@@ -10,7 +10,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/spinload.css">
-  <link rel="stylesheet" type="text/css" href=" https://fonts.googleapis.com/css?family=Pacifico" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -33,31 +33,25 @@
         <h2 id="title"></h2>
         <h4 id="desc"></h4>
       </header>
-      <button id="yes" type="button" class="btn btn-danger btn-lg"> </button>
-      <button id="no" type="button" class="btn btn-info btn-lg"></button>
-      <!-- Add a button to play sound -->
-      <button id="play-sound" type="button" class="btn btn-primary btn-lg">Play Sound</button>
+      <button id="yes" type="button" class="btn btn-danger btn-lg">Yes</button>
+      <button id="no" type="button" class="btn btn-info btn-lg">No</button>
+      <!-- Add buttons to play and stop sound -->
+      <button id="play-sound" type="button" class="btn btn-primary btn-circle">Play</button>
+      <button id="stop-sound" type="button" class="btn btn-secondary btn-circle">Stop</button>
     </div>
   </div>
-  <audio src="./sound/sound.mp3" autoplay muted></audio>
+  <audio id="background-audio" src="./sound/sound.mp3"></audio>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script src="./config.js"></script>
   <script src="./js/main.js"></script>
-  <script>
-    document.getElementById('play-sound').addEventListener('click', function () {
-      document.getElementById('background-audio').play();
-    });
-  </script>
 </body>
 
 </html>
